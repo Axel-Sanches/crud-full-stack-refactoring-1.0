@@ -121,20 +121,6 @@ async function loadStudents()
         console.error('Error cargando estudiantes:', err.message);
     }
 }
-
-async function loadStudents()
-{
-    try 
-    {
-        const students = await studentsAPI.fetchAll();
-        renderStudentTable(students);
-    } 
-    catch (err) 
-    {
-        console.error('Error cargando estudiantes:', err.message);
-    }
-}
-  
 function renderStudentTable(students)
 {
     const tbody = document.getElementById('studentTableBody');
